@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+header#cabecalho {
+    text-align: center;
+    background-color: #0f151a;
+    padding: 100px;
+}
+
+section#sensores {
+    text-align: center;
+    background-color: #282c30;
+    padding: 100px;
+}
+
+section.linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+article.card {
+    width: 48%;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1300px){
+    article.card {
+        width: 100%;
+    }
+}
+
+div.cabecalho-card {
+
+}
+
+div.cabecalho-card i {
+    font-size: 90px;
+    padding: 20px;
+}
+
+div.rodape-card {
+    background-color: #fff;
+    color: black;
+    padding: 50px;
+    font-size: 1.4em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+div.rodape-card p {
+    font-family: "Consolas", sans-serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #383d41;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    padding-bottom: 75px;
+}
+
+span.love {
+    color: #c02d3b;
+}
+
+footer {
+    background-color: #0f151a;
+    padding: 80px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.4em;
+    padding: 10px;
+}

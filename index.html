@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VueJS / MQTT</title>
+    <title>VueJS &lt;3 MQTT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95b81c3774.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="app">
-        <h2>Configurações</h2>
-        <ul>
-            <li>Status da Conexão: {{client.connected}}</li>
-            <li>Sensor DHT - Temperatura: {{receiveNews[receiveNews.length-1]}}</li>
-        </ul>
+        <header id="cabecalho">
+            <h1>VueJS <span class="love"><i class="fas fa-heart"></i></span> MQTT</h1>
+        </header>
+        <section id="sensores">
+            <h2>Monitoramento dos Sensores</h2>
+
+            <section class="linha">
+                <article class="card">
+                    <div class="cabecalho-card">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="rodape-card">
+                        <h3>Temperatura (Sensor DHT)</h3>
+                        <p>{{dht_temperature[dht_temperature.length-1]}}</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="cabecalho-card">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="rodape-card">
+                        <h3>Umidade (Sensor DHT)</h3>
+                        <p>{{dht_humidity[dht_humidity.length-1]}}</p>
+                    </div>
+                </article>
+
+            </section>
+        </section>
+        <footer>
+            <p>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - campus Catanduva</p>
+            <p>Pós-Graduação em Internet das Coisas</p>
+            <p>Desenvolvido por Lucas Matheus e Luciano Ventorine</p>
+        </footer>
     </div>
 
     <script src="js/mqtt.min.js"></script>
