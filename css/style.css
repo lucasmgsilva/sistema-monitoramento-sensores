@@ -39,12 +39,6 @@ article.card {
     margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1300px){
-    article.card {
-        width: 100%;
-    }
-}
-
 div.cabecalho-card {
 
 }
@@ -94,4 +88,23 @@ footer {
 footer p {
     font-size: 1.4em;
     padding: 10px;
+}
+
+@media screen and (max-width: 1300px){
+    article.card {
+        width: 100%;
+    }
+
+    section.linha {
+        max-width: initial;
+    }
+
+    header#cabecalho, section#sensores, footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    body {
+        font-size: 12px;
+    }
 }
