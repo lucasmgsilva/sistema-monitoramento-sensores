@@ -6,8 +6,8 @@ const app = {
         port: 8083,
         endpoint: '/mqtt',
         clean: true, // Reserved session
-        connectTimeout: 4000, // Time out
-        reconnectPeriod: 4000, // Reconnection interval
+        connectTimeout: 30000, // Time out 3 seg
+        reconnectPeriod: 1000, // Reconnection interval
         // Certification Information
         clientId: 'mqttjs_3be2c321',
         username: 'emqx_test',
