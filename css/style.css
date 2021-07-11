@@ -19,7 +19,7 @@ header#cabecalho {
 section#sensores {
     text-align: center;
     background-color: #282c30;
-    padding: 100px;
+    padding: 50px 100px;
 }
 
 section.linha {
@@ -94,7 +94,7 @@ footer p {
     padding: 10px;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 960px){
     article.card {
         width: 100%;
     }
