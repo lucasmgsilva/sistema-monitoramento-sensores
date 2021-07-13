@@ -28,7 +28,7 @@
                         <h3>Temperatura</h3>
                         <p>
                             <img v-if="dht_temperature.length === 1" src="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif">
-                            <span v-else>{{dht_temperature[dht_temperature.length-1]}}</span>
+                            <span v-else>{{dht_temperature[dht_temperature.length-1]}}°C</span>
                         </p>
                     </div>
                 </article>
@@ -41,7 +41,7 @@
                         <h3>Umidade</h3>
                         <p>
                             <img v-if="dht_humidity.length === 1" src="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif">
-                            <span v-else>{{dht_humidity[dht_humidity.length-1]}}</span>
+                            <span v-else>{{dht_humidity[dht_humidity.length-1]}}%</span>
                         </p>
                     </div>
                 </article>

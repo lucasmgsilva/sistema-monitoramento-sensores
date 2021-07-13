@@ -9,7 +9,7 @@ const app = {
         connectTimeout: 30000, // Time out 3 seg
         reconnectPeriod: 1000, // Reconnection interval
         // Certification Information
-        clientId: 'mqttjs_3be2c321',
+        clientId: 'mqttvuejs_3be2c321',
         username: 'emqx_test',
         password: 'emqx_test',
       },
