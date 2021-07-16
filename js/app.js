@@ -56,10 +56,10 @@ const app = {
         console.log('mqtt.connect error', error)
       }
       this.client.on('connect', () => {
-        console.log('Connection succeeded!')
+        console.log('Conexão bem sucedida!')
       })
       this.client.on('error', error => {
-        console.log('Connection failed', error)
+        console.log('Conexão falhou', error)
       })
       this.client.on('message', (topic, message) => {
 
@@ -69,14 +69,14 @@ const app = {
           this.dht_humidity.push(message.toString())
         }
 
-        console.log(`Received message ${message} from topic ${topic}`)
+        console.log(`Mensagem recebida ${message} do tópico ${topic}`)
       })
     },
     doSubscribe() {
       const { topic, qos } = this.subscription
        this.client.subscribe(topic[0], { qos }, (error, res) => {
         if (error) {
-          console.log('Subscribe to topics error', error)
+          console.log('Erro ao inscrever-se no(s) tópico(s)', error)
           return
         }
         this.subscribeSuccess = true
@@ -107,9 +107,9 @@ const app = {
           this.client = {
             connected: false,
           }
-          console.log('Successfully disconnected!')
+          console.log('Desconectado com sucesso!')
         } catch (error) {
-          console.log('Disconnect failed', error.toString())
+          console.log('A desconexão falhou', error.toString())
         }
       }
     }
