@@ -23,7 +23,7 @@ const app = {
       // publish: {
       //   topic: 'topic/browser',
       //   qos: 0,
-      //   payload: '{ "msg": "Hello, I am browser." }',
+      //   payload: '{ "msg": "Olá, eu sou um navegador." }',
       // },
       dht_temperature: ['Carregando...'],
       dht_humidity: ['Carregando...'],
@@ -53,7 +53,7 @@ const app = {
       try {
         this.client = mqtt.connect(connectUrl, options)
       } catch (error) {
-        console.log('mqtt.connect error', error)
+        console.log('Erro no mqtt.connect [error]', error)
       }
       this.client.on('connect', () => {
         console.log('Conexão bem sucedida!')
@@ -74,29 +74,22 @@ const app = {
     },
     doSubscribe() {
       const { topic, qos } = this.subscription
-       this.client.subscribe(topic[0], { qos }, (error, res) => {
+       this.client.subscribe(topic, { qos }, (error, res) => {
         if (error) {
-          console.log('Erro ao inscrever-se no(s) tópico(s)', error)
+          console.log('Erro ao inscrever-se no(s) tópico(s) [error]', error)
           return
         }
         this.subscribeSuccess = true
-        console.log('Subscribe to topics res', res)
+        console.log('Inscrito no(s) tópico(s) [res]', res)
         })
 
-        this.client.subscribe(topic[1], { qos }, (error, res) => {
-          if (error) {
-            console.log('Subscribe to topics error', error)
-            return
-          }
-          this.subscribeSuccess = true
-          console.log('Subscribe to topics res', res)
-          })
+
     },
     doUnSubscribe() {
       const { topic } = this.subscription
       this.client.unsubscribe(topic, error => {
         if (error) {
-          console.log('Unsubscribe error', error)
+          console.log('Erro de cancelamento de inscrição', error)
         }
       })
     },
