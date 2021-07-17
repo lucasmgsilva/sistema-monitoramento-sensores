@@ -42,12 +42,6 @@ const app = {
     // Create connection
     createConnection() {
       // Connect string, and specify the connection method used through protocol
-      // ws unencrypted WebSocket connection
-      // wss encrypted WebSocket connection
-      // mqtt unencrypted TCP connection
-      // mqtts encrypted TCP connection
-      // wxs WeChat mini app connection
-      // alis Alipay mini app connection
       const { host, port, endpoint, ...options } = this.connection
       const connectUrl = `wss://${host}:${port}${endpoint}`
       try {
@@ -82,8 +76,6 @@ const app = {
         this.subscribeSuccess = true
         console.log('Inscrito no(s) tópico(s) [res]', res)
         })
-
-
     },
     doUnSubscribe() {
       const { topic } = this.subscription
